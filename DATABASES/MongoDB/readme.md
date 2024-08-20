@@ -1,7 +1,10 @@
 # MongoDB using docker
 
-1. to start the docker service
+## to start the docker service
+
+```sh
    sudo systemctl start docker
+```   
 
 2. to start docker container
    docker compose up -d
