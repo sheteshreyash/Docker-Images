@@ -1,0 +1,26 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    command: --default-authentication-plugin=caching_sha2_password
+    cap_add:
+      - SYS_NICE
+    environment:
+      MYSQL_DATABASE: "DB"
+      MYSQL_USER: "shreyash"
+      MYSQL_PASSWORD: "abc123"
+      MYSQL_ROOT_PASSWORD: "abc123"
+      MYSQL_AUTH_PLUGIN: "caching_sha2_password"
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    expose:
+      - "33060"
+      - "3306"
+    volumes:
+      - db:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db:
+    driver: local
