@@ -4,7 +4,7 @@
 
 ```sh
    sudo systemctl start docker
-```   
+```
 
 ## to start docker container
 
@@ -42,14 +42,15 @@
    mongodb://root:abc123@localhost:27017/shrey?authSource=admin
 ```
 
-## Check the container status and Verify that the application can reach the MongoDB container:
+## Check the container status and Verify that the application can reach the MongoDB container
+
 (Look for the IP address and ensure that your application is attempting to connect to the correct address and port)
 
 ```sh
    docker inspect cont_id
 ```
 
-## Check the MongoDB logs within the container for any authentication-related issues:
+## Check the MongoDB logs within the container for any authentication-related issues
 
 ```sh
    docker logs cont_id
