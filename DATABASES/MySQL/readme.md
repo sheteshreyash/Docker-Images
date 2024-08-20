@@ -1,29 +1,47 @@
-# Docs
+# MySQL using docker
 
-## Up
+## Navigate to the MySQL Directory
+
+```sh
+    cd MySQL
+```
+
+## Start the Docker Service (if not already running)
+
+```sh
+    sudo systemctl start docker
+```
+
+## start the docker container
 
 ```sh
 docker compose up -d
 ```
 
-## Down
+## check the running containers
 
 ```sh
-docker compose down
+    sudo docker ps
 ```
 
-## connect
+## Get shell access to the container
+
+(replace cont_id with the actual container ID)
 
 ```sh
-docker ps
-docker exec -it cont_id sh
-mysql -u root -p
+    sudo docker exec -it cont_id bash
 ```
 
-## exit from mysql command shell
+## Access the MySQL shell
 
 ```sh
-exit
+    mysql -u root -p
+```
+
+## exit from MySQL command shell
+
+```sh
+    exit
 ```
 
 ## to stop and remove the running container
@@ -31,4 +49,10 @@ exit
 ```sh
 docker stop cont_id
 docker rm cont_id
+```
+
+## Down
+
+```sh
+    docker compose down
 ```

@@ -1,5 +1,11 @@
 # MongoDB using docker
 
+## Navigate to the MongoDB Directory
+
+```sh
+    cd MongoDB
+```
+
 ## to start the docker service
 
 ```sh
@@ -10,12 +16,6 @@
 
 ```sh
    docker compose up -d
-```
-
-## to stop the docker container
-
-```sh
-   docker compose down
 ```
 
 ## see the running containers
@@ -59,5 +59,11 @@
 ## exit fromm mongo shell
 
 ```sh
-    exit
+   exit
+```
+
+## to stop the docker container
+
+```sh
+   docker compose down
 ```
