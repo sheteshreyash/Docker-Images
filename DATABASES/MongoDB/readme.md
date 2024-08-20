@@ -6,30 +6,57 @@
    sudo systemctl start docker
 ```   
 
-2. to start docker container
+## to start docker container
+
+```sh
    docker compose up -d
+```
 
-3. to stop the docker container
+## to stop the docker container
+
+```sh
    docker compose down
+```
 
-4. see the running containers
+## see the running containers
+
+```sh
    sudo docker ps
+```
 
-5. to get the shell access
+## to get the shell access
+
+```sh
    sudo docker exec -it cont_id bash
+```
 
-6. access the mongodb shell with authentication
+## access the mongodb shell with authentication
+
+```sh
    mongosh --username root --password abc123
+```
 
-7. Connect to the mongo database from mongodb compass using below link (it uses shrey database)
+## Connect to the mongo database from mongodb compass using below link (it uses shrey database)
+
+```sh
    mongodb://root:abc123@localhost:27017/shrey?authSource=admin
+```
 
-8. Check the container status and Verify that the application can reach the MongoDB container:
+## Check the container status and Verify that the application can reach the MongoDB container:
+
+```sh
    docker inspect cont_id
    (Look for the IP address and ensure that your application is attempting to connect to the correct address and port)
+```
 
-9. Check the MongoDB logs within the container for any authentication-related issues:
+## Check the MongoDB logs within the container for any authentication-related issues:
+
+```sh
    docker logs cont_id
+```
 
-10. exit fromm mongo shell
+## exit fromm mongo shell
+
+```sh
     exit
+```

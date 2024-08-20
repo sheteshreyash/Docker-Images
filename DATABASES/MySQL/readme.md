@@ -22,11 +22,13 @@ mysql -u root -p
 
 ## exit from mysql command shell
 
-`exit
-`
+```sh
+exit
+```
 
 ## to stop and remove the running container
 
-`docker stop cont_id
+```sh
+docker stop cont_id
 docker rm cont_id
-`
+```
