@@ -43,10 +43,10 @@
 ```
 
 ## Check the container status and Verify that the application can reach the MongoDB container:
+(Look for the IP address and ensure that your application is attempting to connect to the correct address and port)
 
 ```sh
    docker inspect cont_id
-   (Look for the IP address and ensure that your application is attempting to connect to the correct address and port)
 ```
 
 ## Check the MongoDB logs within the container for any authentication-related issues:
