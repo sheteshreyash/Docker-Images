@@ -36,7 +36,7 @@
    mongosh --username root --password abc123
 ```
 
-## Connect to the mongo database from mongodb compass using below link (it uses shrey database)
+## Connect to the mongo database from mongodb compass using below link (it uses local shrey database)
 
 ```sh
    mongodb://root:abc123@localhost:27017/shrey?authSource=admin
